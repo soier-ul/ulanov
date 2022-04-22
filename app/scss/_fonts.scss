@@ -1,9 +1,39 @@
-// @font-face {
-//   font-family: 'EB Garamond';
-//   font-weight: 700;
-//   font-style: normal;
-//   src:
-//     url('../fonts/EBGaramond-Bold.woff2') format('woff2'),
-//     url('../fonts/EBGaramond-Bold.woff') format('woff');
-//   font-display: swap;
-// }
+@font-face {
+  font-family: 'Epilogue';
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url('../fonts/Epilogue-Regular.woff2') format('woff2'),
+    url('../fonts/Epilogue-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Epilogue';
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url('../fonts/Epilogue-Bold.woff2') format('woff2'),
+    url('../fonts/Epilogue-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Epilogue';
+  font-weight: 800;
+  font-style: normal;
+  src:
+    url('../fonts/Epilogue-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Epilogue-ExtraBold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Epilogue';
+  font-weight: 900;
+  font-style: normal;
+  src:
+    url('../fonts/Epilogue-Black.woff2') format('woff2'),
+    url('../fonts/Epilogue-Black.woff') format('woff');
+  font-display: swap;
+}
