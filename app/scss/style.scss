@@ -4,10 +4,43 @@
 @import 'libs';
 @import 'global';
 
+.header {
+  padding: 16px 0;
+  background-color: $blue;
 
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
+  &__list {
+    display: flex;
+  }
 
+  &__item {
+    margin-right: 110px;
 
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
+  &__item-link {
+    color: #fff;
+    @include area;
+  }
 
-
+  &__link {
+    padding: 16px 16px 14px 16px;
+    border: 1px solid rgba(#fff, 0.3);
+    border-radius: 6px;
+    line-height: 1;
+    font-size: 14px;
+    text-align: center;
+    max-width: 140px;
+    width: 100%;
+    text-transform: uppercase;
+    @include line-clamp(1);
+  }
+}
