@@ -87,7 +87,7 @@
 }
 
 .about {
-  padding: 80px 0 120px;
+  padding: 80px 0 60px;
   color: rgba($brown, 0.6);
 
   &__top {
@@ -111,7 +111,6 @@
 
   &__text {
     max-width: 570px;
-    line-height: 2;
     padding-top: 65px;
 
     p {
@@ -169,5 +168,123 @@
     object-position: center;
     border-radius: 6px;
     transition: opacity 0.3s ease;
+  }
+}
+
+.features {
+  padding: 60px 0 70px;
+  color: rgba($brown, 0.6);
+
+  &__inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__wrap {
+    max-width: 410px;
+    width: 100%;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $brown;
+    margin-bottom: 15px;
+  }
+
+  &__items {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__item {
+    border: 1px solid rgba($orange, 0.3);
+    padding: 40px;
+    background-color: $orange-100;
+    max-width: 336px;
+    width: 100%;
+
+    &--left {
+      border-radius: 6px 6px 0 6px;
+      background-color: #fff;
+      box-shadow: 0px 32px 64px 0px rgba(#391400, 0.05);
+    }
+
+    &--right {
+      border-radius: 0 6px 6px 0;
+      border-left: none;
+      padding-top: 100px;
+    }
+  }
+
+  &__item-title {
+    font-weight: 400;
+    color: $brown;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  &__item-text {
+    line-height: 2;
+  }
+
+  &__item-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: $orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+
+    svg {
+      width: 32px;
+      height: 32px;
+      fill: #fff;
+    }
+  }
+}
+
+.advantages {
+  padding: 75px 0 128px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    border: 1px solid rgba($orange, 0.3);
+    padding: 40px 48px;
+    color: $brown;
+    width: 100%;
+
+    &:nth-child(1) {
+      border-radius: 6px 0 0 6px;
+      border-right: none;
+    }
+
+    &:nth-child(3) {
+      border-radius: 0 6px 6px 0;
+      border-left: none;
+    }
+  }
+
+  &__item-title {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-weight: 400;
+  }
+
+  &__text {
+    font-size: 20px;
   }
 }
