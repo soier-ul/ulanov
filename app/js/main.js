@@ -35,6 +35,18 @@ $(function () {
     spacing: '9px',
     starSvg: '<svg><use xlink:href="images/sprite.svg#icon-star"></use></svg>'
   });
+
+  $('.header__link').on("click", function (event) {
+    event.preventDefault();
+
+    var id = $(this).attr('href'),
+
+      top = $(id).offset().top;
+
+    $('body,html').animate({
+      scrollTop: top
+    }, 800);
+  });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
