@@ -395,6 +395,11 @@
 .reviews {
   background-color: $blue;
   padding: 60px 0 75px;
+  overflow: hidden;
+
+  &__container {
+    max-width: 770px;
+  }
 
   &__top {
     display: flex;
@@ -414,6 +419,7 @@
 
   &__swiper {
     padding-bottom: 75px;
+    overflow: initial;
 
     .swiper-slide-active {
       transition: opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
@@ -425,6 +431,53 @@
   &__slide {
     transition: opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     opacity: 0.2;
-    width: auto;
+    max-width: 770px;
+  }
+}
+
+.faq {
+  padding: 75px 0 60px;
+  background-color: $blue;
+
+  &__container {
+    max-width: 770px;
+  }
+
+  &__top {
+    margin-bottom: 60px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 40px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__top-text {
+    color: rgba(#fff, 0.6);
+    line-height: 2;
+  }
+
+  &__item {
+    border: 1px solid #3a3c56;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+
+    &:last-child {
+      border-radius: 0 0 6px 6px;
+    }
+
+    &:first-child {
+      border-radius: 6px 6px 0 0;
+    }
   }
 }

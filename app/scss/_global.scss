@@ -218,3 +218,69 @@ body {
     }
   }
 }
+
+.accordion {
+
+  &__btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 40px;
+    background-color: $blue;
+    transition: background-color 0.4s;
+
+    &--active {
+      background-color: #fff;
+      transition: background-color 0.4s;
+
+      .accordion__btn-descr {
+        color: $brown;
+      }
+
+      .accordion__btn-decor {
+        svg {
+          transform: rotate(0);
+        }
+      }
+
+      &~.accordion__content {
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__btn-descr {
+    font-size: 22px;
+    color: #fff;
+    transition: color 0.4s;
+  }
+
+  &__btn-decor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: $orange;
+
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: #fff;
+      transform: rotate(180deg);
+      transition: transform 0.5s;
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: background-color 0.4s, max-height 0.4s;
+  }
+
+  &__text {
+    padding: 0 40px 35px 40px;
+  }
+}
