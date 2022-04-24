@@ -56,7 +56,7 @@ body {
   display: inline-block;
   color: $orange;
   text-transform: uppercase;
-  letter-spacing: 0.19em;
+  letter-spacing: 0.24em;
   line-height: 1;
 }
 
@@ -136,6 +136,85 @@ body {
       background-color: rgba(#570b00, 0.25);
       border-radius: 6px;
       z-index: -1;
+    }
+  }
+}
+
+.rating {
+  padding: 0;
+}
+
+.feedback {
+  max-width: 770px;
+  padding: 48px;
+  border-radius: 6px;
+  border: 1px solid #f3d1bf;
+  background-color: #fff;
+
+  &__rating {
+    margin-bottom: 45px;
+  }
+
+  &__comment {
+    line-height: 2;
+    margin-bottom: 30px;
+    color: rgba($brown, 0.6);
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    margin-right: 24px;
+  }
+
+  &__avatar-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 100%;
+    object-position: center;
+  }
+
+  &__user-info {
+    color: $brown;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__user-name {
+    font-size: 22px;
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+}
+
+.swiper {
+  .swiper-pagination {
+    bottom: 0;
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: transparent;
+      border: 1px solid #4e4f6e;
+      margin: 0 10px;
+      opacity: 1;
+      @include area;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+
+      &::after {
+        width: 45px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $orange;
+      border-color: $orange;
     }
   }
 }

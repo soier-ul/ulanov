@@ -390,30 +390,41 @@
   &__position {
     color: rgba(#fff, 0.6);
   }
+}
 
-  .swiper-pagination {
-    bottom: 0;
+.reviews {
+  background-color: $blue;
+  padding: 60px 0 75px;
 
-    .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      background-color: transparent;
-      border: 1px solid #4e4f6e;
-      margin: 0 10px;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 65px;
+  }
+
+  &__subtitle {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    max-width: 420px;
+    text-align: center;
+  }
+
+  &__swiper {
+    padding-bottom: 75px;
+
+    .swiper-slide-active {
+      transition: opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
       opacity: 1;
-      @include area;
-      transition: background-color 0.2s ease, border-color 0.2s ease;
-
-      &::after {
-        width: 45px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
+      box-shadow: 0px 32px 64px 0px rgba(#391400, 0.05);
     }
+  }
 
-    .swiper-pagination-bullet-active {
-      background-color: $orange;
-      border-color: $orange;
-    }
+  &__slide {
+    transition: opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    opacity: 0.2;
+    width: auto;
   }
 }
