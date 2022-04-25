@@ -16,6 +16,7 @@ body {
 
 .main {
   flex-grow: 1;
+  padding-top: 78px;
 }
 
 .sr-only {
@@ -38,18 +39,27 @@ body {
 }
 
 .logo {
+  z-index: 20;
 
   &__img {
     width: 140px;
     height: 45px;
     object-fit: contain;
-    object-position: left;
+    object-position: center;
   }
 }
 
 .title {
   font-size: 56px;
   font-weight: 400;
+
+  @include max-w($lg) {
+    font-size: 50px;
+  }
+
+  @include max-w($sm) {
+    font-size: 40px;
+  }
 }
 
 .subtitle {
@@ -72,7 +82,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 570px;
   width: 100%;
   max-height: 450px;
   height: 100%;
@@ -150,6 +159,7 @@ body {
   border-radius: 6px;
   border: 1px solid #f3d1bf;
   background-color: #fff;
+  height: 100%;
 
   &__rating {
     margin-bottom: 45px;
@@ -224,11 +234,15 @@ body {
   &__btn {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 35px 40px;
     background-color: $blue;
     transition: background-color 0.4s;
+
+    @include max-w($sm) {
+      padding: 30px;
+    }
 
     &--active {
       background-color: #fff;
@@ -254,6 +268,14 @@ body {
     font-size: 22px;
     color: #fff;
     transition: color 0.4s;
+    @include line-clamp(3);
+    max-width: 610px;
+    width: 100%;
+    text-align: left;
+
+    @include max-w($xs) {
+      max-width: 180px;
+    }
   }
 
   &__btn-decor {
@@ -282,6 +304,10 @@ body {
 
   &__text {
     padding: 0 40px 35px 40px;
+
+    @include max-w($sm) {
+      padding: 0 30px 30px 30px;
+    }
   }
 }
 
@@ -315,6 +341,70 @@ body {
       height: 16px;
       fill: #fff;
       transition: fill 0.3s;
+    }
+  }
+}
+
+.burger {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid rgba(#fff, 0.3);
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index: 20;
+
+  @include max-w($lg) {
+    display: flex;
+  }
+
+  &__row {
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    position: relative;
+    transition: background-color 0.1s;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 16px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: #fff;
+      transition: transform 0.3s, top 0.1s, width 0.2s;
+    }
+
+    &::before {
+      bottom: 5px;
+    }
+
+    &::after {
+      top: 5px;
+    }
+  }
+
+  &--active {
+    .burger__row {
+      background-color: transparent;
+      width: 20px;
+
+      &::before {
+        transform: rotate(45deg);
+        top: 0;
+        width: 20px;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        top: 0;
+        width: 20px;
+      }
     }
   }
 }

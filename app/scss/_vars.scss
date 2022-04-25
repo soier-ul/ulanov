@@ -17,6 +17,12 @@ $xs: 480px;
   }
 }
 
+@mixin min-w($width) {
+  @media (min-width: calc($width + 1px)) {
+    @content;
+  }
+}
+
 @mixin line-clamp($lines: 1) {
   @if $lines <=1 {
     overflow: hidden;
